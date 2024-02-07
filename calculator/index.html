@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Frontend Mentor | Calculator app</title>
+  </head>
+  <body>
+    <header>
+      <p id="logo">calculator</p>
+      <div id="input-wrapper">
+        <p id="input-theme">Theme</p>
+        <div id="numbers-and-slider">
+          <div id="input-numbers">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+          </div>
+          <input
+            type="range"
+            id="theme-slider"
+            min="1"
+            max="3"
+            value="1"
+            step="1"
+          />
+        </div>
+      </div>
+    </header>
+    <div id="output">0</div>
+    <div class="calculator">
+      <!-- Number and Operator rows -->
+      <button id="7">7</button>
+      <button id="8">8</button>
+      <button id="9">9</button>
+      <button id="del-button">DEL</button>
+
+      <button id="4">4</button>
+      <button id="5">5</button>
+      <button id="6">6</button>
+      <button id="+">+</button>
+
+      <button id="1">1</button>
+      <button id="2">2</button>
+      <button id="3">3</button>
+      <button id="-">-</button>
+
+      <button id=".">.</button>
+      <button id="0">0</button>
+      <button id="/">/</button>
+      <button id="x">x</button>
+
+      <!-- Reset and Equal sign row -->
+      <button id="reset-button">RESET</button>
+      <button id="equals-button">=</button>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://criscrawford.com" target="_blank">Cris Crawford</a>.
+    </div>
+    <script>
+      // ChatGPT suggestion to prevent unwanted zooming on mobile.
+      document.addEventListener("gesturestart", function (e) {
+        e.preventDefault();
+      });
+    </script>
+    <script src="theme.js"></script>
+    <script src="calculate.js"></script>
+  </body>
+</html>

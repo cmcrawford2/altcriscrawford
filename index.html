@@ -1,0 +1,697 @@
+<!--criscrawford.com-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cris Crawford</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel=“icon” href=”favicon.ico” type=“image/x-icon”> <link rel=“shortcut
+    icon” href=“favicon.ico” type=“image/x-icon”>
+  </head>
+  <body class="body-theme">
+    <header class="main-header">
+      <div class="header-wrapper">
+        <h1>Cris Crawford</h1>
+        <nav>
+          <ul>
+            <li><a href="#original">Original Apps</a></li>
+            <li><a href="#frontend">Frontend Projects</a></li>
+            <li><a href="#advanced">Advanced Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-divider"></div>
+    </header>
+    <main>
+      <section id="about">
+        <div class="about-wrapper">
+          <div class="picture-box">
+            <img
+              id="cris-picture"
+              src="img/makerspace-cris.jpg"
+              alt="Picture of Cris"
+            />
+          </div>
+          <div class="about-box">
+            <h2>About this site</h2>
+            <p>
+              Here you will find some of my recent work in web page and app
+              design. In 2021, I started learning front end development. I've
+              learned HTML, CSS, JavaScript, and React. I've done some work in
+              backend using Python. Prior to that, and ongoing, I've been
+              studying machine learning and data engineering.
+            </p>
+            <p>
+              For about 20 years I designed surface modeling algorithms for
+              computer-aided design systems. This included writing analytic and
+              numerical surface intersectors and surface evaluators, trimming
+              curves and recalculating surface boundaries, implementing Boolean
+              operations on solid models with intersection curve chaining and
+              coincidence analysis, filleting and rounding edges, and more.
+            </p>
+            <p>
+              I enjoy every new challenge. I also love all kinds of puzzles,
+              playing the piano from Bach to Debussy, and making colorful arts
+              and crafts.
+            </p>
+          </div>
+        </div>
+        <div class="section-divider"></div>
+      </section>
+      <section id="original">
+        <article class="titled-content">
+          <h2>Original JavaScript and React Apps</h2>
+          <div class="content-block">
+            <div class="pic-plus-info">
+              <figure class="pic-plus-info-figure">
+                <a href="https://cryptogram-assistant.com" target="_blank">
+                  <img
+                    class="pic-plus-info-img"
+                    src="img/cryptogram-pic-large.jpeg"
+                    alt="Cryptogram app screenshot"
+                  />
+                </a>
+              </figure>
+              <a href="https://cryptogram-assistant.com" target="_blank">
+                Cryptogram Assistant
+              </a>
+              <a
+                href="https://github.com/cmcrawford2/cryptogram_assistant_app"
+                target="_blank"
+              >
+                Github repository
+              </a>
+              <p id="paragraph1">
+                I like solving cryptograms on paper, and I prefer to use a pen
+                rather than a pencil. So either I get it right from the start,
+                or I have an inky mess.
+                <span id="more1" style="display: none"
+                  >So when a friend suggested I write a game, I immediately
+                  thought of a helpful formatted cryptogram app that lets me try
+                  out different solutions. There are a couple dozen cryptograms
+                  included. While researching other cryptogram sites, I noticed
+                  some of them were quite addictive. My goal in writing this was
+                  to make a non-addictive game. Therefore, entering the guess
+                  letters requires some work, there's no prize at the end, and
+                  the number of provided quotes is limited. But it's still a lot
+                  of fun. Written in React.</span
+                >
+                <a href="#" class="toggle" data-target="more1">More</a>
+              </p>
+            </div>
+            <div class="pic-plus-info">
+              <figure class="pic-plus-info-figure">
+                <a href="https://palette-assistant.com" target="_blank">
+                  <img
+                    class="pic-plus-info-img"
+                    src="img/palette-pic.jpeg"
+                    alt="Palette app screenshot"
+                  />
+                </a>
+              </figure>
+              <a href="https://palette-assistant.com" target="_blank">
+                Palette Assistant
+              </a>
+              <a
+                href="https://github.com/cmcrawford2/palette-assistant"
+                target="_blank"
+              >
+                Github repository
+              </a>
+              <p id="paragraph2">
+                I was motivated to write this app after I saw a similar grid of
+                colors sorted alphabetically, and then sorted naively by red
+                first, then green, then blue.
+                <span id="more2" style="display: none"
+                  >I thought I could do a better job. I soon learned that
+                  sorting colors is a thorny problem. Visual media companies
+                  that need to determine color brightness apply different
+                  weights to the red, green and blue components of light to
+                  compute a lightness value. Initially I allowed the user to
+                  rearrange the color chips and recompute the weights, but my
+                  friends and family preferred to choose palettes, so that's
+                  what this app does. Written in React.</span
+                >
+                <a href="#" class="toggle" data-target="more2">More</a>
+              </p>
+            </div>
+            <div class="pic-plus-info">
+              <figure class="pic-plus-info-figure">
+                <a href="https://penrose-laboratory.com" target="_blank">
+                  <img
+                    class="pic-plus-info-img"
+                    src="img/final-penrose.jpeg"
+                    alt="Penrose app screenshot"
+                  />
+                </a>
+              </figure>
+              <a href="https://penrose-laboratory.com" target="_blank">
+                Penrose Laboratory
+              </a>
+              <a
+                href="https://github.com/cmcrawford2/penrose-app"
+                target="_blank"
+              >
+                Github repository
+              </a>
+              <p id="paragraph3">
+                With this app I'm reliving my glory days as a student of
+                electrical engineering. This career consisted of exactly two
+                semesters of Laboratory Electronics at the Harvard Extension
+                School.
+                <span id="more3" style="display: none">
+                  During the second semester, we built a computer on a
+                  breadboard with chips and wires using the Motorola 68004
+                  microprocessor. I wrote a program for this computer to
+                  generate Penrose tiling patterns on an oscilloscope display.
+                  At first I entered machine language instructions directly onto
+                  a programmable RAM. When things got complicated, I switched to
+                  an assembly language translator. This is basically the same
+                  algorithm, except the language is React and the output is to
+                  the browser.</span
+                >
+                <a href="#" class="toggle" data-target="more3">More</a>
+              </p>
+            </div>
+            <div class="pic-plus-info">
+              <div class="color-3d-container">
+                <iframe
+                  class="embedded-html"
+                  src="./color-dots.html"
+                  width="100%"
+                  height="100%"
+                  frameborder="0"
+                ></iframe>
+              </div>
+              <p class="caption">Rotate me!</p>
+              <a
+                href="https://github.com/cmcrawford2/colordots"
+                target="_blank"
+              >
+                Github repository
+              </a>
+              <p>
+                This color dot cube is created by randomly generating 2500 sets
+                of coordinates which represent at the same time X, Y and Z and
+                R, G and B. It's written in JavaScript using the "canvas" tag of
+                HTML.
+              </p>
+            </div>
+            <div class="pic-plus-info">
+              <figure class="pic-plus-info-figure">
+                <a
+                  href="https://classic-memory-card-game.netlify.app/"
+                  target="_blank"
+                >
+                  <img
+                    class="pic-plus-info-img"
+                    src="img/memory-game.jpeg"
+                    alt="Memory Game Screenshot"
+                  />
+                </a>
+              </figure>
+              <a
+                href="https://classic-memory-card-game.netlify.app/"
+                target="_blank"
+              >
+                Memory game
+              </a>
+              <a
+                href="https://github.com/cmcrawford2/memory-game"
+                target="_blank"
+              >
+                Github repository
+              </a>
+              <p>
+                Click on two cards, and if they match, they're removed from the
+                grid. This game is an homage to the memory card game of my
+                childhood. I maintain it as an open source project with several
+                contributors.
+              </p>
+            </div>
+            <div class="pic-plus-info">
+              <figure class="pic-plus-info-figure">
+                <a
+                  href="http://rainbow-kashata-6531f5.netlify.app"
+                  target="_blank"
+                >
+                  <img
+                    class="pic-plus-info-img"
+                    src="img/connect-4.jpeg"
+                    alt="Connect-4 Screenshot"
+                  />
+                </a>
+              </figure>
+              <a
+                href="http://rainbow-kashata-6531f5.netlify.app"
+                target="_blank"
+              >
+                Connect 4
+              </a>
+              <a href="https://github.com/cmcrawford2/connect4" target="_blank">
+                Github repository
+              </a>
+              <p>
+                This is a Connect 4 game, written in vanilla JavaScript. It
+                follows a vanilla JavaScript tic-tac-toe tutorial, but the
+                design of the CSS that drops the markers down the grid is my
+                own.
+              </p>
+            </div>
+          </div>
+        </article>
+        <div class="section-divider"></div>
+      </section>
+      <section id="frontend">
+        <article class="titled-content">
+          <h2>Frontend Projects</h2>
+          <div class="content-block">
+            <div class="pic-plus-info">
+              <figure class="pic-plus-info-figure">
+                <a
+                  href="https://cris-crawfords-myteam-website.netlify.app"
+                  target="_blank"
+                >
+                  <img
+                    class="pic-plus-info-img-static"
+                    src="img/myteam-website.png"
+                    alt="myteam website screenshot"
+                  />
+                </a>
+              </figure>
+              <a
+                href="https://cris-crawfords-myteam-website.netlify.app"
+                target="_blank"
+              >
+                Myteam website
+              </a>
+              <a
+                href="https://github.com/cmcrawford2/myteam-website"
+                target="_blank"
+              >
+                Github repository
+              </a>
+              <p>
+                This is a frontend mentor challenge, written in HTML, CSS, and
+                JavaScript. It's coded entirely from scratch, except for the
+                images. It features several interactive elements, including a
+                form with custom validation.
+              </p>
+            </div>
+            <div class="pic-plus-info">
+              <figure class="pic-plus-info-figure">
+                <a
+                  href="https://cris-crawfords-typemaster-page.netlify.app"
+                  target="_blank"
+                >
+                  <img
+                    class="pic-plus-info-img-static"
+                    src="img/typemaster-page.png"
+                    alt="typemaster page screenshot"
+                  />
+                </a>
+              </figure>
+              <a
+                href="https://cris-crawfords-typemaster-page.netlify.app"
+                target="_blank"
+              >
+                Typemaster page
+              </a>
+              <a
+                href="https://github.com/cmcrawford2/typemaster-landing-page"
+                target="_blank"
+              >
+                Github repository
+              </a>
+              <p>
+                This is a basic pre-order landing page, written in HTML, CSS,
+                and JavaScript. It's a frontend mentor challenge. The challenge
+                here was changing the layout and photos in mobile, tablet and
+                desktop styles.
+              </p>
+            </div>
+            <div class="pic-plus-info">
+              <figure class="pic-plus-info-figure">
+                <a
+                  href="https://cris-crawfords-room-homepage.netlify.app"
+                  target="_blank"
+                >
+                  <img
+                    class="pic-plus-info-img-static"
+                    src="img/room-homepage.png"
+                    alt="room homepage screenshot"
+                  />
+                </a>
+              </figure>
+              <a
+                href="https://cris-crawfords-room-homepage.netlify.app"
+                target="_blank"
+              >
+                Room homepage
+              </a>
+              <a
+                href="https://github.com/cmcrawford2/room-homepage"
+                target="_blank"
+              >
+                Github repository
+              </a>
+              <p>
+                For this frontend mentor challenge, I created a basic home page.
+                The challenge was to style the interactive elements. The arrows
+                on the lower right allow the user to flip through three hero
+                images. Written in HTML, CSS, and JavaScript.
+              </p>
+            </div>
+            <div class="pic-plus-info">
+              <figure class="pic-plus-info-figure">
+                <a
+                  href="https://cris-crawfords-space-tourism-site.netlify.app"
+                  target="_blank"
+                >
+                  <img
+                    class="pic-plus-info-img-static"
+                    src="img/space-tourism.png"
+                    alt="space tourism screenshot"
+                  />
+                </a>
+              </figure>
+              <a
+                href="https://cris-crawfords-space-tourism-site.netlify.app"
+                target="_blank"
+              >
+                Space tourism
+              </a>
+              <a
+                href="https://github.com/cmcrawford2/space-tourism-site"
+                target="_blank"
+              >
+                Github repository
+              </a>
+              <p>
+                This was a joint tutorial offered by Scrimba and Frontend
+                mentor. I followed along with Kevin Powell to create the first
+                three pages of this multi-page site, then coded the technology
+                page by myself. It was a huge challenge, but I learned so much!
+              </p>
+            </div>
+            <div class="pic-plus-info">
+              <figure class="pic-plus-info-figure">
+                <a
+                  href="https://cris-crawfords-calculator.netlify.app"
+                  target="_blank"
+                >
+                  <img
+                    class="pic-plus-info-img-static"
+                    src="img/calculator.png"
+                    alt="calculator screenshot"
+                  />
+                </a>
+              </figure>
+              <a
+                href="https://cris-crawfords-calculator.netlify.app"
+                target="_blank"
+              >
+                Calculator
+              </a>
+              <a
+                href="https://github.com/cmcrawford2/calculator"
+                target="_blank"
+              >
+                Github repository
+              </a>
+              <p>
+                This calculator has three themes - light, dark, and Barbie. The
+                challenge here was writing a calculator in Javascript.
+              </p>
+            </div>
+
+            <div class="pic-plus-info">
+              <figure class="pic-plus-info-figure">
+                <img
+                  class="pic-plus-info-img-static"
+                  src="img/unplugged.jpeg"
+                  alt="Unplugged screenshot"
+                />
+              </figure>
+              <a href="unplugged/index.html" target="_blank"
+                >Unplugged Retreat</a
+              >
+              <p>
+                This fully responsive website was based on a Photoshop layout.
+                It was written entirely by hand using an HTML Boilerplate
+                template.
+              </p>
+            </div>
+            <div class="pic-plus-info">
+              <figure class="pic-plus-info-figure">
+                <img
+                  class="pic-plus-info-img-static"
+                  src="img/recipe-cards.jpeg"
+                  alt="Recipe Cards screenshot"
+                />
+              </figure>
+              <a href="recipe-cards/index.html" target="_blank">Recipe Cards</a>
+              <p>
+                For this bonus project, we used a markdown style guide to format
+                the page and learned how to incorporate icons.
+              </p>
+            </div>
+            <div class="pic-plus-info">
+              <figure class="pic-plus-info-figure">
+                <img
+                  class="pic-plus-info-img-static"
+                  src="img/jubilee-austen.jpeg"
+                  alt="Jubilee Austen screenshot"
+                />
+              </figure>
+              <a href="jubilee-austen/index.html" target="_blank"
+                >Jubilee Austen</a
+              >
+              <p>
+                The first assignment in my basic HTML and CSS class was to
+                reproduce a Photoshop layout as a web page. In Photoshop, I
+                extracted the images and identified the layout parameters, and
+                rendered the design as a static web page.
+              </p>
+            </div>
+          </div>
+        </article>
+        <div class="section-divider"></div>
+      </section>
+      <section id="advanced">
+        <article class="titled-content">
+          <h2>Advanced Projects</h2>
+          <div class="content-block">
+            <div class="pic-plus-info">
+              <figure class="pic-plus-info-figure">
+                <img
+                  class="pic-plus-info-img-static"
+                  src="img/pie.png"
+                  alt="Book language pie chart"
+                />
+              </figure>
+              <a
+                href="https://replit.com/@crawfordcris/310-L12-Soft-Books-1"
+                target="_blank"
+              >
+                Replit repository
+              </a>
+              <p>
+                For this chart, I read a Kaggle database of books into pandas,
+                and made a pie chart using matplotlib where each wedge
+                represents the language in which the book was written.
+              </p>
+            </div>
+            <div class="pic-plus-info">
+              <figure class="pic-plus-info-figure">
+                <img
+                  class="pic-plus-info-img-static"
+                  src="img/mosaic_plot.png"
+                  alt="Endangered Species Mosaic chart"
+                />
+              </figure>
+              <a
+                href="https://replit.com/@crawfordcris/310-L11-Cleaning-Data-Animals-1"
+                target="_blank"
+              >
+                Replit repository
+              </a>
+              <p>
+                I used the mosaic library to create this chart of endangered
+                species of three types of animals (birds, mammals and reptiles)
+                and three categories of risk, using data scraped from the web.
+              </p>
+            </div>
+            <div class="pic-plus-info">
+              <figure class="pic-plus-info-figure">
+                <img
+                  class="pic-plus-info-img-static"
+                  src="img/salary_and_happiness.png"
+                  alt="Salary and Happiness chart"
+                />
+              </figure>
+              <a
+                href="https://replit.com/@crawfordcris/310-L6-Step-3-wage-and-happiness-3"
+                target="_blank"
+              >
+                Replit repository
+              </a>
+              <p>
+                I used matplotlib and seaborn to create this chart of National
+                Happiness scores vs. average salary in US dollars.
+              </p>
+            </div>
+
+            <div class="pic-plus-info">
+              <figure class="pic-plus-info-figure">
+                <img
+                  class="pic-plus-info-img-static"
+                  src="img/countries.png"
+                  alt="Country picker screenshot"
+                />
+              </figure>
+              <a
+                href="https://cris-crawfords-country-picker.netlify.app"
+                target="_blank"
+                >Rest Countries API</a
+              >
+              <a
+                href="https://github.com/cmcrawford2/rest-countries-api"
+                target="_blank"
+              >
+                Github repository
+              </a>
+              <p>
+                I used react router to create this fully interactive web site.
+                The user can filter for a region, search for a country, and view
+                statistics for an individual country.
+              </p>
+            </div>
+            <div class="pic-plus-info">
+              <figure class="pic-plus-info-figure">
+                <img
+                  class="pic-plus-info-img-static"
+                  src="img/DogImageGallery.png"
+                  alt="Dog Image Gallery"
+                />
+              </figure>
+              <a
+                href="https://replit.com/@crawfordcris/Dog-Image-Gallery"
+                target="_blank"
+                >Dog Image Gallery</a
+              >
+              <p>
+                I used Flask and Jinja to create this app. Select a number of
+                images, a type of dog, or just choose a random photo.
+              </p>
+            </div>
+            <div class="pic-plus-info">
+              <figure class="pic-plus-info-figure">
+                <img
+                  class="pic-plus-info-img-static"
+                  src="img/quote-image.png"
+                  alt="Inspirational quote app"
+                />
+              </figure>
+              <a
+                href="https://inspirational-quotes-by-women.netlify.com"
+                target="_blank"
+                >Favorite Quotes</a
+              >
+              <p>
+                With this app, you can sort quotes by type and choose your
+                favorites. Written in React, using hooks.
+              </p>
+            </div>
+            <div class="pic-plus-info">
+              <figure class="pic-plus-info-figure">
+                <img
+                  class="pic-plus-info-img-static"
+                  src="img/personal-assistant.png"
+                  alt="Python Personal Assistant app"
+                />
+              </figure>
+              <a
+                href="https://replit.com/@crawfordcris/Personal-Assistant?v=1"
+                target="_blank"
+                >Python Personal Assistant</a
+              >
+              <p>
+                This project, written in Python, reads and writes JSON files for
+                a todo list, birthdays and contacts, and lets the user add and
+                delete items. View it on Replit.
+              </p>
+            </div>
+          </div>
+        </article>
+        <div class="section-divider"></div>
+      </section>
+      <footer id="contact">
+        <div class="contact-wrapper">
+          <h2>Contact</h2>
+          <div class="contact-icons">
+            <div class="icon-container">
+              <a href="mailto:crawford.cris@gmail.com"
+                ><i class="fas fa-envelope"></i
+              ></a>
+            </div>
+            <div class="icon-container">
+              <a
+                href="https://www.linkedin.com/in/cris-crawford-6a2b3484/"
+                target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </div>
+            <div class="icon-container">
+              <a href="https://github.com/cmcrawford2" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script>
+      // Get all "more" links with the class "toggle"
+      const toggleLinks = document.querySelectorAll(".toggle");
+
+      // Add click event listeners to each "more" link
+      toggleLinks.forEach((toggleLink) => {
+        toggleLink.addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent the link from navigating
+
+          // Get the target ID from the "data-target" attribute
+          const targetId = this.getAttribute("data-target");
+          const moreContent = document.getElementById(targetId);
+
+          if (
+            moreContent.style.display === "none" ||
+            moreContent.style.display === ""
+          ) {
+            moreContent.style.display = "inline"; // Show the additional content
+            this.textContent = "Less"; // Change the link text to "Less"
+          } else {
+            moreContent.style.display = "none"; // Hide the additional content
+            this.textContent = "More"; // Change the link text back to "More"
+          }
+        });
+      });
+    </script>
+    <script
+      src="https://kit.fontawesome.com/7350f5973a.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,371 @@
+/***** reset *****/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+.body-theme {
+  background: #d9d5d4;
+  color: #0f1015;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+  color: #0f1015;
+}
+
+/***** HEADER *****/
+
+.main-header {
+  padding-inline: 20px;
+  margin-block: 48px;
+}
+
+.header-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header-wrapper h1 {
+  font-size: 36px;
+}
+
+.header-wrapper nav {
+  margin-block: 18px;
+}
+
+.header-wrapper nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  list-style-type: none;
+}
+
+.header-wrapper nav a {
+  color: #0f1014;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.header-wrapper nav a:hover,
+.header-wrapper nav a:focus {
+  color: blueviolet;
+  font-weight: 600;
+}
+
+.header-divider {
+  width: 100%;
+  height: 1px;
+  margin-top: 16px;
+  background-color: #0f1015;
+}
+
+/* Tablet */
+@media (min-width: 520px) {
+  .main-header {
+    padding-inline: 40px;
+  }
+  .header-wrapper nav {
+    width: 100%;
+    padding-inline: 16px;
+  }
+  .header-wrapper nav ul {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .header-wrapper nav a {
+    font-size: clamp(16px, 2.5vw, 20px);
+  }
+  .header-divider {
+    margin-top: 0;
+  }
+}
+
+/* Desktop */
+@media (min-width: 820px) {
+  .main-header {
+    padding-inline: 60px;
+  }
+  .header-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-wrapper h1 {
+    font-size: clamp(30px, 3.5vw, 36px);
+  }
+  .header-wrapper nav {
+    width: auto;
+    padding-inline: 0;
+    margin: 0;
+  }
+  .header-wrapper nav ul {
+    max-width: 600px;
+    gap: clamp(21px, 2.5vw, 48px);
+  }
+  .header-wrapper nav a {
+    font-size: clamp(16px, 2vw, 18px);
+  }
+}
+
+/***** ABOUT *****/
+
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-inline: 20px;
+}
+
+.picture-box img#cris-picture {
+  width: 90%;
+  margin-inline: auto;
+  border: 12px solid white;
+}
+
+.about-box h2 {
+  font-size: 24px;
+  margin-top: 24px;
+}
+
+.about-box p {
+  font-size: 18px;
+  padding-inline: 6px;
+  margin-top: 8px;
+}
+
+.about-box {
+  margin-bottom: 24px;
+}
+
+.section-divider {
+  height: 1px;
+  margin-inline: 20px;
+  margin-bottom: 24px;
+  background-color: #0f1015;
+}
+
+@media (min-width: 520px) {
+  .about-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: 40px;
+  }
+  .picture-box {
+    width: 30%;
+  }
+  .about-box {
+    width: 65%;
+  }
+  .about-box h2 {
+    margin-top: 0;
+  }
+  .about-box p {
+    padding-inline: 0;
+  }
+  .section-divider {
+    margin-inline: 40px;
+  }
+}
+
+@media (min-width: 820px) {
+  .section-divider {
+    margin-top: 24px;
+    margin-inline: 60px;
+  }
+}
+
+.titled-content {
+  padding-inline: 20px;
+}
+
+.content-block {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.pic-plus-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-inline: 6px;
+}
+
+.pic-plus-info-figure,
+.color-3d-container {
+  margin-bottom: 16px;
+}
+
+.pic-plus-info p {
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.pic-plus-info-img {
+  height: auto;
+  border: 10px solid white;
+  margin-inline: auto;
+}
+
+.pic-plus-info-img-static {
+  height: auto;
+  border: 10px solid tan;
+  margin-inline: auto;
+}
+
+.color-3d-container {
+  /* height: auto; */
+  /* margin: 0 21px 21px 21px; */
+  border: 10px solid white;
+  /* width: calc(100% - 20px); */
+  min-width: calc(100% - 20px);
+  /* width: auto; */
+  /* It somehow vanished when I removed padding below. */
+  padding-bottom: calc(75% - 15px);
+  position: relative;
+}
+
+.embedded-html {
+  position: absolute;
+}
+
+.caption {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  font-size: 18px;
+  line-height: 20.5px;
+  font-weight: 600;
+}
+
+/* Tablet styles */
+@media (min-width: 520px) {
+  .titled-content {
+    padding-inline: 40px;
+  }
+  .content-block {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 820px) {
+  .titled-content {
+    padding-inline: 60px;
+  }
+  .content-block {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/***** CONTACT *****/
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-inline: 20px;
+  margin-bottom: 36px;
+}
+
+.contact-wrapper h2 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.contact-wrapper a {
+  margin-right: 15px;
+}
+
+.contact-icons {
+  display: flex;
+  flex-direction: row;
+  margin-left: 6px;
+}
+
+.contact-icons a {
+  font-size: 50px;
+  text-decoration: none;
+}
+
+@media (min-width: 520px) {
+  .contact-wrapper {
+    padding-inline: 40px;
+  }
+}
+
+@media (min-width: 820px) {
+  .contact-wrapper {
+    padding-inline: 60px;
+  }
+  .contact-wrapper a {
+    margin-right: 24px;
+  }
+  .contact-icons {
+    margin-left: 10px;
+  }
+}
+
+.icon-container a i.fas.fa-envelope::before {
+  font-size: 50;
+  background: linear-gradient(
+    to right,
+    #ff3355,
+    #ff9900
+  ); /* Gradient color for envelope icon */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.icon-container a i.fab.fa-linkedin::before {
+  font-size: 50px;
+  background: linear-gradient(
+    to right,
+    #dd9933,
+    #117711
+  ); /* Gradient color for Github icon */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.icon-container a i.fab.fa-github::before {
+  font-size: 50;
+  background: linear-gradient(
+    to right,
+    #0033ff,
+    #990099
+  ); /* Gradient color for LinkedIn icon */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+#more {
+  color: #777;
+}
+
+#toggle {
+  text-decoration: underline;
+  cursor: pointer;
+}

@@ -1,0 +1,117 @@
+/***** BASE STYLES *****/
+.body-theme {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/***** HEADER *****/
+header {
+    height: 450px;
+}
+header h1 { 
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 23px;
+    color: #000000;
+    padding: 40px 0; /* center up and down to 110px, subtract font-size */
+    padding-left: 6px;
+}
+header h1 span {
+    color:#77a466
+}
+nav {
+    float: right; 
+    padding: 48px 0;
+    padding-right: 6px;
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    line-height 23px;
+    color: #828282;
+    padding-left: 25px;
+}
+
+/***** GRID *****/
+.full-width {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: auto;
+}
+.half-width {
+    width: 600px;
+    float: left;
+}
+.third-width {
+    width: 400px;
+    float: left;
+}
+
+/***** ABOUT *****/
+#about .full-width {
+    padding: 0 6px;
+}
+#about h2 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    color: #77a466;
+    text-transform: uppercase;
+    padding: 100px, 0;
+}
+#about p {
+    font-size: 16px;
+    color: #000000;
+    line-height: 25px;
+}
+
+/***** CONTENT *****/
+
+#menu h3 {
+    font-size: 12px;
+    line-height: 25px;
+    text-transform: uppercase;
+}
+#menu p {
+    font-size: 16px;
+    color: #77a466;
+    line-height: 18px;
+}
+#reviews h3 {
+    font-size: 12px;
+    line-height: 25px;
+    text-transform: uppercase;
+    padding: 0 25px;
+}
+#reviews p {
+    font-size: 16px;
+    line-height: 21px;
+    padding: 0 25px;
+}
+#contact h3 {
+    font-size: 12px;
+    line-height: 25px;
+    text-transform: uppercase;
+    padding: 0 25px;
+}
+#contact p {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 25px;
+}
+
+/***** FOOTER *****/
+#main-footer h2 {
+    text-align: center;
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#main-footer span {
+    font-family: 'Galada', cursive;
+    color: #77a466;
+}

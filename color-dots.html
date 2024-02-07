@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HTML5 3-D Color Dots</title>
+    <script src="https://unpkg.com/mathjs@9.4.2/lib/browser/math.js"></script>
+  </head>
+  <body>
+    <canvas id="draw" width="800px" height="800px"></canvas>
+    <script>
+      // global variables
+
+      const NP = 2500;
+      const canvas = document.querySelector("#draw");
+      const ctx = canvas.getContext("2d");
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      // X and Y are the center of the page. Use this to translate color dots.
+      // Also use scale to fill the page.
+      let X = canvas.width / 2;
+      let Y = canvas.height / 2;
+      let scale = Math.min(X / 255, Y / 255);
+      let isDrawing = false;
+      let lastX = 0;
+      let lastY = 0;
+      let pointArray = [];
+
+      // Functions
+
+      function onResize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        X = canvas.width / 2;
+        Y = canvas.height / 2;
+        scale = Math.min(X / 255, Y / 255);
+        plotPoints(pointArray);
+      }
+
+      function getRotMat(angle_a, angle_b) {
+        // angle_a is how much to rotate left to right (around Y axis)
+        // angle_b is how much to rotate up and down (around X axis)
+        const cosa = Math.cos(angle_a);
+        const sina = Math.sin(angle_a);
+        const cosb = Math.cos(angle_b);
+        const sinb = Math.sin(angle_b);
+        const Y_rot_mat = [
+          [cosa, 0, sina, 0, 0, 0],
+          [0, 1, 0, 0, 0, 0],
+          [-sina, 0, cosa, 0, 0, 0],
+          [0, 0, 0, 1, 0, 0],
+          [0, 0, 0, 0, 1, 0],
+          [0, 0, 0, 0, 0, 1],
+        ];
+        const X_rot_mat = [
+          [1, 0, 0, 0, 0, 0],
+          [0, cosb, -sinb, 0, 0, 0],
+          [0, sinb, cosb, 0, 0, 0],
+          [0, 0, 0, 1, 0, 0],
+          [0, 0, 0, 0, 1, 0],
+          [0, 0, 0, 0, 0, 1],
+        ];
+        return math.multiply(X_rot_mat, Y_rot_mat);
+      }
+
+      function plotPoints(points) {
+        for (i = 0; i < NP; i++) {
+          let rotPoint = points[i];
+          let x_coord = rotPoint[0];
+          let y_coord = rotPoint[1];
+          x_coord *= scale;
+          y_coord *= scale;
+          // console.log({alpha, beta});
+          // Create the circle using ctx.arc. Radius is 3px, start angle is 0, end is 2*pi.
+          ctx.beginPath();
+          ctx.arc(x_coord + X, y_coord + Y, 3, 0, 2 * Math.PI);
+          // I don't actually know why I had to compute the hex color.
+          // Setting fillStyle to "rgb(r, g, b)" did not work, dots were all black.
+          // Show the circle!!!!!
+          let HexColor = "#";
+          if (rotPoint[3] < 16) HexColor += "0";
+          HexColor += rotPoint[3].toString(16);
+          if (rotPoint[4] < 16) HexColor += "0";
+          HexColor += rotPoint[4].toString(16);
+          if (rotPoint[5] < 16) HexColor += "0";
+          HexColor += rotPoint[5].toString(16);
+          ctx.fillStyle = HexColor;
+          ctx.fill();
+        }
+      }
+
+      function draw(e) {
+        if (!isDrawing) return;
+        // Assume the angle to move through would be 180 degrees if it were the entire screen dimension.
+        const around_y = -((lastX - e.offsetX) / canvas.width) * math.PI;
+        const around_x = ((lastY - e.offsetY) / canvas.height) * math.PI;
+        rot_mat = getRotMat(around_y, around_x);
+
+        newPointArray = math.transpose(
+          math.multiply(rot_mat, math.transpose(pointArray))
+        );
+        newPointArray.sort((a, b) => a[2] - b[2]);
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        plotPoints(newPointArray);
+        pointArray = newPointArray;
+        [lastX, lastY] = [e.offsetX, e.offsetY];
+      }
+
+      function touchDraw(e) {
+        if (!isDrawing) return;
+        // Assume the angle to move through would be 180 degrees if it were the entire screen dimension.
+        const around_y =
+          -((lastX - e.touches[0].clientX) / canvas.width) * math.PI;
+        const around_x =
+          ((lastY - e.touches[0].clientY) / canvas.height) * math.PI;
+        rot_mat = getRotMat(around_y, around_x);
+
+        newPointArray = math.transpose(
+          math.multiply(rot_mat, math.transpose(pointArray))
+        );
+        newPointArray.sort((a, b) => a[2] - b[2]);
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        plotPoints(newPointArray);
+        pointArray = newPointArray;
+        [lastX, lastY] = [e.touches[0].clientX, e.touches[0].clientY];
+      }
+
+      // Runtime
+
+      // Initialize the points.
+
+      for (let i = 0; i < NP; i++) {
+        // Choose random numbers between 0 and 255 for red, green, and blue.
+        let R = math.round(math.random() * 255);
+        let G = math.round(math.random() * 255);
+        let B = math.round(math.random() * 255);
+        // center movable RGB coords around origin, save fixed color values after.
+        let point = [R - 128, G - 128, B - 128, R, G, B];
+        pointArray.push(point);
+      }
+      pointArray.sort((a, b) => a[2] - b[2]);
+      plotPoints(pointArray);
+
+      canvas.addEventListener("mousedown", (e) => {
+        isDrawing = true;
+        [lastX, lastY] = [e.offsetX, e.offsetY];
+      });
+      canvas.addEventListener("mousemove", draw);
+      canvas.addEventListener("mouseup", () => (isDrawing = false));
+      canvas.addEventListener("mouseout", () => (isDrawing = false));
+
+      /* phone stuff */
+
+      canvas.addEventListener("touchstart", (e) => {
+        isDrawing = true;
+        [lastX, lastY] = [e.touches[0].clientX, e.touches[0].clientX];
+      });
+      canvas.addEventListener("touchmove", touchDraw);
+      canvas.addEventListener("touchend", () => (isDrawing = false));
+      canvas.addEventListener("touchcancel", () => (isDrawing = false));
+
+      window.addEventListener("resize", onResize);
+    </script>
+
+    <style>
+      html,
+      body {
+        margin: 0;
+        overflow: hidden;
+        background-color: lavender;
+      }
+      canvas {
+        width: 100vw;
+        height: 100vh;
+      }
+    </style>
+  </body>
+</html>
